@@ -1,0 +1,196 @@
+<!doctype html>
+<html lang="pt-br">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Sobre o DOM</title>
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1 id="titulo-principal">Conhecendo o DOM</h1>
+    </header>
+
+    <main>
+      <section>
+        <h2>O que é o DOM?</h2>
+        <p>DOM significa <strong>Document Object Model</strong>.</p>
+        <p>
+          é uma representação do documento HTML em forma de objetos, organizada
+          em uma estrutura hierárquica de árvore, conhecida como DOM Tree.
+        </p>
+
+        <figure>
+          <img
+            src="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/example-dom-tree.svg"
+            alt="reperesentação do document object model"
+          />
+          <figcaption>
+            Exemplo de DOM tree(árvore da DOM) - Foto: Mozzila
+          </figcaption>
+        </figure>
+
+        <p>
+          Note que cada elemento do HTML está conectado. Chamados esses
+          elementos de nó (node) dentro dessa estrutura.
+        </p>
+
+        <p>
+          Em outras palavras, o navegador basicamente transfoma o HTML em uma
+          estruturs que o JavaScript consegue acessar e manipular.
+        </p>
+      </section>
+
+      <section>
+        <h2>Pra que serve o DOM?</h2>
+        <p>
+          O DOM permite que o JavaScript interaja com os elementos HTML.
+          Exemplos:
+        </p>
+        <ul>
+          <li><strong>Selecionar elementos</strong>: Encontrar um botão</li>
+          <li>
+            <strong>Alterar conteúdo</strong>: Alterar um título, parágrafo...
+          </li>
+          <li>
+            <strong>Alterar estilos</strong>: Criar parágrafo, listas, links e
+            etc
+          </li>
+          <li>
+            <strong>Remover elementos</strong>: Excluir itens criados e já
+            existentes
+          </li>
+          <li>
+            <strong>Capturar eventos</strong>: Detectar cliques, teclas
+            pressionadas e etc
+          </li>
+          <li>
+            <strong>Modificar atributos</strong>: Alterar um src, um aria-label
+            e etc.
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Exemplo com contador</h2>
+        <div class="container-contador">
+          <p id="contador">0</p>
+          <button id="diminuir">- Diminuir</button>
+          <button id="aumentar">+ Aumentar</button>
+        </div>
+      </section>
+
+        <section class="criar-elementos">
+          <h2> Criando elementos </h2>
+          <form id="form-tarefa">
+            <label for="tarefa"> Digite a sua tarefa </label>
+            <input type="text" id="tarefa" placeholder="Comprar banana...">
+            <button id="adicionar-item" type="submit"> Adicionar item </button>
+          </form>
+
+          <ul id="lista"></ul>
+        </section>
+
+    </main>
+
+    <footer>
+      <p>&copy; Todos os direitos reservados - Kauã | 2026</p>
+    </footer>
+
+    <!-- Área de prática -->
+    <script>
+      // capturando elementos
+      const tituloPrincipal = document.getElementById("titulo-principal");
+      console.log(tituloPrincipal);
+
+      tituloPrincipal.textContent = "Aprendendo JavaScript";
+
+      // tituloPrincipal.innerHTML
+
+      // tituloPrincipal.style.backdropFilter
+
+      // tituloPrincipal.style.color = "red";
+      // tituloPrincipal.style.backgroundColor = "green";
+      // tituloPrincipal.style.fontsize = "2.5rem";
+
+      // Capturando mais de um elemento
+      const sections = document.querySelectorAll("section");
+      // console.log(sections);
+
+      sections.forEach(function (section) {
+        section.style.backgroundColor = "#fcda90";
+      });
+
+      // Exemplo de contador
+      const contador = document.getElementById("contador");
+      const btnAumentar = document.querySelector("#aumentar");
+      const btnDiminuir = document.querySelector("#diminuir");
+
+      let numero = 1;
+
+      btnAumentar.addEventListener("click", function () {
+        numero++;
+        contador.textContent = numero;
+      });
+
+      btnDiminuir.addEventListener("click", () => {
+        numero--;
+        contador.textContent = numero;
+      });
+
+      //  Criando elementos
+      // const lista = document.querySelector("#lista")
+      // const botao = document.querySelector("#adicionar-item")
+      
+      // botao.addEventListener("click", function() {
+      //   // 1 - Cria elemento
+      //   const itemLista = document.createElement("li");
+        
+      //   // 2 - Atualiza elemento com o conteúdo
+      //   itemLista.textContent = "Estudar Eventos do JavaScript";
+
+      //   // 3 - Anexa/insere/adicionar item a lista
+      //   lista.appendChild(itemLista);
+      // })
+
+      // 1 - Capturar elementos
+      const lista = document.querySelector("#lista");
+      const formulario = document.querySelector("#form-tarefa");
+      const inputTarefa = document.querySelector("#tarefa");
+      
+      // 2 - Configurando o evento/ação
+      formulario.addEventListener("submit", function (event) {
+        // impede o recarregamento da página
+        event.preventDefault();
+      
+        // 3 - Capturando o valor digitado pelo usuário
+        const tarefa = inputTarefa.value.trim();
+
+        if(tarefa === ""){
+          alert("Digite uma tarefa!");
+          inputTarefa.focus();
+          return;
+        }
+
+        // 4 - Criando um novo elemento li
+        const itemLista = document.createElement("li")
+
+        // 5 - inserindo o texto digitado dentro do li
+        itemLista.textContent = tarefa;
+
+        // 6 - Adicionando o li dentro da ul
+        lista.appendChild(itemLista);
+
+        // 7 - Limpando o input
+        inputTarefa.value = "";
+
+        // 8 - Devolvendo o foco para o input
+        inputTarefa.focus();
+        
+      })
+
+    </script>
+  </body>
+</html>
