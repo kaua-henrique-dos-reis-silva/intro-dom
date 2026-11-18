@@ -1,35 +1,89 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title> Explorando o DOM </title>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Explorando o DOM</title>
 
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Barcode+39&family=Nunito:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=JetBrains+Mono:ital,wght@0,100..800;1,100..800&family=Libre+Barcode+39&family=Nunito:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+      rel="stylesheet"
+    />
 
-<link rel="stylesheet" href="style.css">
-</head>
+    <link rel="stylesheet" href="style.css" />
+  </head>
 
-<body>
+  <body>
     <header>
-        <nav class="navbar">
-            <a href="#" class="logo"> Logo </a>
+      <nav class="navbar">
+        <a href="#" class="logo"> Logo </a>
 
-            <button type="button" id="menu-toggle" aria-label="Abrir menu" aria-expanded="false" aria-controls="menu"> 
-                <svg width="48" height="48" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M21 5.5H3V7h18V5.5Zm0 5.75H3v1.5h18v-1.5ZM3 17h18v1.5H3V17Z" fill="currentColor"/></svg>
-            </button>
+        <button
+          type="button"
+          id="menu-toggle"
+          aria-label="Abrir menu"
+          aria-expanded="false"
+          aria-controls="menu"
+        >
+          <svg
+            width="48"
+            height="48"
+            viewbox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M21 5.5H3V7h18V5.5Zm0 5.75H3v1.5h18v-1.5ZM3 17h18v1.5H3V17Z"
+              fill="currentColor"
+            />
+          </svg>
+        </button>
+
+        <ul id="menu" class="menu">
+          <li><a href="#inicio"> Início </a></li>
+          <li><a href="#sobre"> Sobre </a></li>
+          <li><a href="#servicos"> Serviços </a></li>
+          <li><a href="#contato"> Contato </a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main></main>
+
+    <!-- modal -->
+    <dialog id="modal-inscricao" class="modal" open>
+        <button type="button" class="modal-fechar" aria-label="Fechar modal"> X </button>
+
+        <div class="modal-conteudo">
+            <span> NEWSLETTER </span>
+
+            <h2> Fique por dentro</h2>
+            <p> Inscreva-se para receber novidades, conteúdos e dicas diretamente no seu email. </p>
             
-             <ul id="menu" class="menu">
-                <li> <a href="#inicio"> Início </a></li>
-                <li> <a href="#sobre"> Sobre </a></li>
-                <li> <a href="#servicos"> Serviços </a></li>
-                <li> <a href="#contato"> Contato </a></li>
-            </ul>
-        </nav>
-    </header>    
+            <form id="form-inscricao">
+                <div>
+                <label for=""> Seu nome </label>
+                <input type="text" id="nome" name="nome" placeholder="Ex: Ana" required>
+                </div>
+                <div>
+
+                <label for="email"> Seu email </label>
+                <input type="email" id="email" name="email" placeholder="Ex: email@email.com" required>
+                </div>
+                <div>
+                
+                <button type="submit" class="modal-submit"> Quero me inscrever </button>
+                
+            </form>
+
+            <span class="modal-rodape"> Sem spam. Cancele quando quiser! </span>
+        </div>
+    </dialog>
 
     <script src="js/menu-hamburguer.js"></script>
-</body>
+  </body>
 </html>
