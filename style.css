@@ -21,7 +21,7 @@ body {
   background-color: var(--color-creme);
 }
 
-header {
+.header {
   width: 100%;
   background-color: var(--color-dark);
   padding: 1rem 0.5rem;
@@ -84,20 +84,62 @@ nav button {
   transform: translateY(0);
 }
 
-.menu a{
-    display: block;
-    color: var(--color-creme);
-    font-weight: 500;
-    padding: 0.5rem;
-    border-radius: 1rem;
+.menu a {
+  display: block;
+  color: var(--color-creme);
+  font-weight: 500;
+  padding: 0.5rem;
+  border-radius: 1rem;
 }
 
-.menu a:hover{
-    background-color: var(--color-pink)
+.menu a:hover {
+  background-color: var(--color-pink);
+}
+
+/* noticias */
+.noticias {
+  max-width: 75rem;
+  margin: auto;
+  padding: 3rem 1rem;
+}
+
+.noticias-header {
+  margin-bottom: 2rem;
+}
+
+.noticias-header h1 {
+  margin: 1rem 0 0.5rem;
+  color: var(--color-dark);
+  font-size: 2rem;
+}
+
+.noticias-header p {
+  color: #666;
+  line-height: 1.5;
+}
+
+.lista-noticias {
+  display: grid;
+  grid-template-columns: repeat(autofit, minmax(15.625rem, 1fr));
+  gap: 1rem;
+}
+
+.card-noticia {
+  height: 100%;
+  overflow: hidden;
+
+  border-radius: 1rem;
+  background-color: var(--color-dark);
+  box-shadow: 0 0.5rem 1rem rgba(19, 35, 91, 0.321);
+
+  display: flex;
+  flex-direction: column;
+
+  transition: all 300 ease-in;
 }
 
 /* modal */
-.modal{
+.modal {
   width: min(98%, 28rem);
   margin: auto;
 
@@ -112,7 +154,7 @@ nav button {
   box-shadow: 0 1.5rem 5rem rgba(0, 0, 0, 0.35);
 }
 
-.modal::backdrop{
+.modal::backdrop {
   background-color: rgba(0, 0, 0, 0.8);
   backdrop-filter: blur(0.75rem);
 }
@@ -142,7 +184,7 @@ nav button {
   background-color: transparent;
 }
 
-.modal-fechar:hover{
+.modal-fechar:hover {
   background-color: var(--color-pink);
   color: var(--color-dark);
 }
@@ -151,7 +193,8 @@ nav button {
   padding: 2rem;
 }
 
-.modal-tag {
+.modal-tag,
+.noticias-tag {
   display: inline-block;
 
   padding: 0.5rem 0.85rem;
@@ -167,7 +210,7 @@ nav button {
 .modal h2 {
   font-size: 1.75rem;
   margin-bottom: 0.75rem;
-  color: var(--color-pink)
+  color: var(--color-pink);
 }
 
 .modal p {
@@ -188,12 +231,12 @@ nav button {
   gap: 0.5rem;
 }
 
-.form-inscricao label{
+.form-inscricao label {
   font-size: 0.85rem;
   font-weight: 500;
 }
 
-.form-inscricao input{
+.form-inscricao input {
   padding: 1rem;
   border: 0.125rem solid transparent;
   border-radius: 1rem;
@@ -204,11 +247,11 @@ nav button {
   font: inherit;
 }
 
-.form-inscricao input:focus{
+.form-inscricao input:focus {
   border-color: var(--color-pink);
 }
 
-.modal-submit{
+.modal-submit {
   padding: 1rem;
   border-radius: 1rem;
 
@@ -224,7 +267,7 @@ nav button {
   transition: all 300ms ease-in;
 }
 
-.modal-submit:hover{
+.modal-submit:hover {
   background-color: var(--color-pink);
   color: var(--color-dark);
 }
