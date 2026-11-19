@@ -52,21 +52,50 @@
       </nav>
     </header>
 
-    <main></main>
+    <main id="conteudo-principal">
+      <section class="noticias" aria-labelledby="titulo-noticias">
+        <header class="noticias-header">
+          <span class="noticias-tag"> Informação em tempo real </span>
+        <h1 id="titulo-principal"> Últimas notícias </h1>
+        <p> Confira as principais notícias do Brasil e do mundo! </p>
+        
+        </header>
+        
+        <ul id="lista-noticias" class="lista-noticias" aria-label="Lista de noticias">
+          <li> Carregando notícias... </li>
+        
+          <li>
+            <article>
+              <img src="https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/example-dom-tree.svg" alt="reperesentação do document object model"/>
+
+              <div>
+                <span> UOL </span>
+                <h2> Título da notícia </h2>
+                <p> Descrição da notícia </p>
+                <span> 19/11/2026 </span>
+
+                <a href="#"> Ler notícia </a>
+              </div>
+            </article>
+          </li>
+        </ul>
+        
+      </section>
+    </main>
 
     <!-- modal -->
-    <dialog id="modal-inscricao" class="modal" open>
-        <button type="button" class="modal-fechar" aria-label="Fechar modal"> X </button>
+    <dialog id="modal-inscricao" class="modal">
+        <button type="button" class="modal-fechar" aria-label="Fechar modal" id="modal-fechar"> <svg width="24" height="24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><path d="m20.28 4.78-1.06-1.06L12 10.94 4.78 3.72 3.72 4.78 10.94 12l-7.22 7.22 1.06 1.06L12 13.06l7.22 7.22 1.06-1.06L13.06 12l7.22-7.22Z" fill="currentColor"/></svg> </button>
 
         <div class="modal-conteudo">
-            <span> NEWSLETTER </span>
+            <span class="modal-tag"> NEWSLETTER </span>
 
-            <h2> Fique por dentro</h2>
+            <h2> Fique por dentro! </h2>
             <p> Inscreva-se para receber novidades, conteúdos e dicas diretamente no seu email. </p>
             
-            <form id="form-inscricao">
+            <form id="form-inscricao" class="form-inscricao">
                 <div>
-                <label for=""> Seu nome </label>
+                <label for="nome"> Seu nome </label>
                 <input type="text" id="nome" name="nome" placeholder="Ex: Ana" required>
                 </div>
                 <div>
@@ -85,5 +114,6 @@
     </dialog>
 
     <script src="js/menu-hamburguer.js"></script>
+    <script src="js/modal.js"></script>
   </body>
 </html>
