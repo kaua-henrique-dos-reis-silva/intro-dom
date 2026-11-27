@@ -1,10 +1,9 @@
 <!doctype html>
-<html lang="pt-br">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Sobre | Aplicação Bootstrap</title>
-
     <link
       href="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/css/bootstrap.min.css"
       rel="stylesheet"
@@ -12,63 +11,140 @@
       crossorigin="anonymous"
     />
   </head>
+
   <body>
     <header>
-      <nav class="navbar sm:navbar-expand bg-1 fg-2">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="../index.html">Navbar</a>
-          <button
-            class="btn-icon navbar-toggler"
-            type="button"
-            data-bs-toggle="drawer"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-label="Toggle navigation"
-          >
-            <span class="navbar-toggler-icon" aria-hidden="true"></span>
-          </button>
-          <dialog
-            class="drawer drawer-end"
-            id="navbarNav"
-            aria-labelledby="navbarNavLabel"
-          >
-            <div class="drawer-header">
-              <h5 class="drawer-title" id="navbarNavLabel">Menu</h5>
-              <button
-                type="button"
-                class="btn-close"
-                data-bs-dismiss="drawer"
-                aria-label="Close"
-              ></button>
+        <nav class="navbar lg:navbar-expand bg-1 fg-2">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="../index.html"> WorldTech </a>
+                <button class="btn-icon navbar-toggler" type="button" data-bs-toggle="drawer"
+                    data-bs-target="#navbarNavMenu" aria-controls="navbarNavMenu" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon" aria-hidden="true"></span>
+                </button>
+                <dialog class="drawer drawer-end" id="navbarNavMenu" aria-labelledby="navbarNavMenuLabel">
+                    <div class="drawer-header">
+                        <h5 class="drawer-title" id="navbarNavMenuLabel">Menu</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="drawer" aria-label="Close"></button>
+                    </div>
+                    <div class="drawer-body">
+                        <ul class="navbar-nav">
+                            <li class="nav-item">
+                                <a class="nav-link active" aria-current="page" href="../index.html">Home</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="contato.html"> Contato </a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" href="sobre.html"> Sobre </a>
+                            </li>
+                            <li class="nav-item">
+                                <button class="nav-link" type="button" data-bs-toggle="menu" aria-expanded="false">
+                                    Empresas
+                                </button>
+                                <div class="menu">
+                                    <a class="menu-item" href="#">Seja parceiro</a>
+                                    <a class="menu-item" href="#">Conheça o projeto</a>
+                                    <a class="menu-item" href="#">Doações</a>
+                                    <a class="menu-item" href="#">Trabalhe conosco</a>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </dialog>
             </div>
-            <div class="drawer-body">
-              <ul class="navbar-nav">
-                <li class="nav-item">
-                  <a class="nav-link active" aria-current="page" href="#"
-                    >Home</a
-                  >
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Features</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link" href="#">Pricing</a>
-                </li>
-                <li class="nav-item">
-                  <a class="nav-link disabled" aria-disabled="true">Disabled</a>
-                </li>
-              </ul>
-            </div>
-          </dialog>
-        </div>
-      </nav>
+        </nav>
     </header>
 
-    <script
-      type="module"
-      src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-+PW0IDVGGwmpaBQvcXY+W0BcpHpITFB3dSfSoGvDdHtLbrLpSbpGcvtQRM/BJpz+"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+   <main>
+        <main class="container p-5">
+        <section class="header-main p-2">
+            <h2 class="hero-title "> A tecnologia do mundo, sem ruído.</h2>
+            <p class="mt-4 fg-secondary"> O WorldTech reúne as principais notícias de IA, hardware, startups e segurança
+                em um só
+                lugar, com
+                linguagem clara e link para a fonte original.</p>
+
+            <div class="card">
+                <article class="card-body">
+                    <h3 class="card-title mb-3"> Por que a WorldTech existe? </h3>
+                    <p>
+                        Todo dia saem centenas de notícias sobre tecnologia, e a maior parte se repete ou chega sem
+                        contexto. O WorldTech existe para filtrar esse excesso e mostrar o que realmente muda o mercado,
+                        os produtos e o trabalho de quem vive de tecnologia.
+                    </p>
+                    <p> Você não precisa ser da área para acompanhar. Quem já é da área ganha tempo.</p>
+                </article>
+            </div>
+
+            <section class="mt-5 border-top border-2 border-secondary-subtle pt-4">
+                <h2> O que cobrimos? </h2>
+                <ul class="grid text-center grid-cols-6 list-unstyled mt-5">
+                    <li class="bg-muted-primary border border-2 border-primary rounded-pill p-4"> Tecnologia </li>
+                    <li class="bg-muted-primary border border-2 border-primary rounded-pill p-4"> Negócios </li>
+                    <li class="bg-muted-primary border border-2 border-primary rounded-pill p-4"> IA </li>
+                    <li class="bg-muted-primary border border-2 border-primary rounded-pill p-4"> Saúde </li>
+                    <li class="bg-muted-primary border border-2 border-primary rounded-pill p-4"> Games </li>
+                </ul>
+            </section>
+
+            <section class="mt-5 border-top border-2 border-secondary-subtle pt-4">
+                <h3 class="card-title"> Como as notícias chegam até aqui? </h3>
+
+                <ul class="d-flex gap-2 flex-column list-unstyled list-group list-group-flush">
+                    <li class="list-group-item"> <strong> Fontes </strong> <span> : Comunicados oficiais das empresas e
+                        veículos de referência em
+                        tecnologia. </span> </li>
+                    <li class="list-group-item"> <strong> Créditos </strong> : Toda notícia leva o nome e o link da
+                        fonte original.</li>
+                    <li class="list-group-item"> <strong> Correções </strong>: Se encontrarmos um erro, corrigimos a
+                        página e indicamos o que
+                        mudou.</li>
+                </ul>
+            </section>
+
+            <section class="mt-5 border-top border-2 border-secondary-subtle pt-4">
+
+                <h3 class="card-title"> O que guia o projeto? </h3>
+                <ul class="d-flex gap-2 flex-column list-unstyled list-group list-group-flush">
+                    <li class="list-group-item"> <strong> Clareza: </strong> Texto direto, sem jargão desnecessário.
+                    </li>
+                    <li class="list-group-item"> <strong> Transparência: </strong> Dizemos de onde vem cada informação.
+                    </li>
+                    <li class="list-group-item"> <strong> Contexto: </strong> Além da manchete: o que aconteceu e por
+                        que importa.</li>
+                </ul>
+            </section>
+<section class="mt-5 border-top border-2 border-secondary-subtle pt-4">
+                <h3 class="card-title">O que entra na nossa pauta?</h3>
+                <ul class="d-flex gap-2 flex-column list-unstyled list-group list-group-flush">
+
+                    <li class="list-group-item">
+                        <strong>Relevância</strong>: Priorizamos o que impacta o dia a dia,
+                        deixando de lado o ruído passageiro.
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Independência</strong>: Nenhuma empresa paga para aparecer aqui;
+                        conteúdo patrocinado é sempre sinalizado.
+                    </li>
+
+                    <li class="list-group-item">
+                        <strong>Apuração</strong>: Cruzamos os dados antes de publicar para
+                        evitar boatos ou vazamentos sem base.
+                    </li>
+                </ul>
+            </section>
+        </section>
+    </main>
+
+    <footer>
+
+    </footer>
+
+    <!-- Script do Bootstrap -->
+    <script type="module" src="https://cdn.jsdelivr.net/npm/bootstrap@6.0.0-alpha.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-+PW0IDVGGwmpaBQvcXY+W0BcpHpITFB3dSfSoGvDdHtLbrLpSbpGcvtQRM/BJpz+"
+        crossorigin="anonymous"></script>
+</body>
+
 </html>

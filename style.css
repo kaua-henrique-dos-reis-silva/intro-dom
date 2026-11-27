@@ -202,6 +202,14 @@ nav button {
   outline-offset: 0.25rem;
 }
 
+/* footer */
+footer {
+  background-color: var(--color-dark);
+  color: var(--color-creme);
+  padding: 2rem 1rem;
+  text-align: center;
+}
+
 /* modal */
 .modal {
   width: min(98%, 28rem);
